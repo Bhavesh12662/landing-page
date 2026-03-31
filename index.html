@@ -1,13 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sammunat-landing</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlow - Stay Focused. Get More Done.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif']
+          },
+          colors: {
+            primary: '#2563eb',
+            dark: '#0b1220',
+            slate: '#1e293b'
+          },
+          boxShadow: {
+            glow: '0 20px 45px -15px rgba(37, 99, 235, 0.35)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .fade-up {
+      animation: fadeUp 0.7s ease-out both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-dark font-sans antialiased">
+  <header id="home" class="relative overflow-hidden bg-gradient-to-br from-dark via-slate to-primary text-white">
+    <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(circle at 20% 10%, #60a5fa 0, transparent 35%), radial-gradient(circle at 80% 60%, #1d4ed8 0, transparent 40%);"></div>
+    <nav class="relative mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
+      <h1 class="text-2xl font-extrabold tracking-tight">FocusFlow</h1>
+      <div class="hidden items-center gap-8 text-sm font-semibold md:flex">
+        <a href="#home" class="transition hover:text-blue-200">Home</a>
+        <a href="#features" class="transition hover:text-blue-200">Features</a>
+        <a href="#pricing" class="transition hover:text-blue-200">Pricing</a>
+        <a href="#contact" class="transition hover:text-blue-200">Contact</a>
+      </div>
+      <a href="#contact" class="rounded-full border border-white/40 px-4 py-2 text-sm font-semibold transition hover:bg-white hover:text-dark">Try Now</a>
+    </nav>
+    <div class="relative mx-auto flex w-full max-w-6xl items-center justify-center gap-5 px-6 pb-4 text-sm font-semibold md:hidden">
+      <a href="#home" class="transition hover:text-blue-200">Home</a>
+      <a href="#features" class="transition hover:text-blue-200">Features</a>
+      <a href="#pricing" class="transition hover:text-blue-200">Pricing</a>
+      <a href="#contact" class="transition hover:text-blue-200">Contact</a>
+    </div>
+
+    <section class="relative mx-auto grid w-full max-w-6xl gap-10 px-6 pb-16 pt-8 lg:grid-cols-2 lg:items-center lg:px-10 lg:pb-24">
+      <div class="fade-up space-y-6">
+        <p class="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-100">Productivity App</p>
+        <h2 class="text-4xl font-extrabold leading-tight sm:text-5xl">Stay Focused. Get More Done.</h2>
+        <p class="max-w-xl text-base text-blue-100 sm:text-lg">FocusFlow helps you prioritize tasks, track your time, and build momentum with smart insights designed to keep your day clear and productive.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#pricing" class="rounded-full bg-white px-6 py-3 text-sm font-bold text-primary shadow-glow transition hover:-translate-y-0.5 hover:bg-blue-50">Get Started</a>
+          <a href="#features" class="rounded-full border border-white/40 px-6 py-3 text-sm font-bold transition hover:bg-white/10">Explore Features</a>
+        </div>
+      </div>
+      <div class="fade-up rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-md lg:p-8">
+        <div class="space-y-5">
+          <div class="rounded-xl bg-white/15 p-4">
+            <p class="text-xs uppercase tracking-wider text-blue-100">Today's Focus</p>
+            <p class="mt-2 text-lg font-bold">Launch Campaign Assets</p>
+            <div class="mt-3 h-2 rounded-full bg-white/20">
+              <div class="h-2 w-3/4 rounded-full bg-blue-300"></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl bg-white/15 p-4">
+              <p class="text-xs uppercase tracking-wider text-blue-100">Tasks Done</p>
+              <p class="mt-2 text-2xl font-extrabold">18</p>
+            </div>
+            <div class="rounded-xl bg-white/15 p-4">
+              <p class="text-xs uppercase tracking-wider text-blue-100">Focus Time</p>
+              <p class="mt-2 text-2xl font-extrabold">5.2h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="features" class="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10">
+      <div class="mx-auto max-w-2xl text-center">
+        <h3 class="text-3xl font-extrabold sm:text-4xl">Powerful Features for Peak Productivity</h3>
+        <p class="mt-3 text-slate-600">Everything you need to organize your work and stay consistent every day.</p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V9m-7-4h7m0 0v7m0-7L10 14" /></svg>
+          </div>
+          <h4 class="text-lg font-bold">Task Management</h4>
+          <p class="mt-2 text-sm text-slate-600">Plan, prioritize, and complete tasks with a clean daily workflow.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h4 class="text-lg font-bold">Time Tracking</h4>
+          <p class="mt-2 text-sm text-slate-600">Track focused work sessions and understand where your hours go.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <h4 class="text-lg font-bold">Analytics</h4>
+          <p class="mt-2 text-sm text-slate-600">Review productivity trends and improve habits with smart insights.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-4l-4 4v-4z" /></svg>
+          </div>
+          <h4 class="text-lg font-bold">Reminders</h4>
+          <p class="mt-2 text-sm text-slate-600">Never miss deadlines with intelligent nudges and due-date alerts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="bg-slate-50 py-16">
+      <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-2 lg:items-center lg:px-10">
+        <div>
+          <h3 class="text-3xl font-extrabold sm:text-4xl">About FocusFlow</h3>
+          <p class="mt-4 text-slate-600">FocusFlow is built for busy professionals, students, and teams who want structure without complexity. From planning your day to analyzing your productivity patterns, FocusFlow helps you cut distractions and turn intent into consistent results.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-xl bg-white p-5 shadow-sm">
+            <p class="text-2xl font-extrabold text-primary">40%</p>
+            <p class="mt-1 text-sm text-slate-600">Average boost in weekly task completion</p>
+          </div>
+          <div class="rounded-xl bg-white p-5 shadow-sm">
+            <p class="text-2xl font-extrabold text-primary">10k+</p>
+            <p class="mt-1 text-sm text-slate-600">Active users building better habits</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="mx-auto w-full max-w-6xl px-6 py-16 lg:px-10">
+      <div class="mx-auto max-w-2xl text-center">
+        <h3 class="text-3xl font-extrabold sm:text-4xl">Loved by Productive People</h3>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <blockquote class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-slate-700">"FocusFlow finally gave me a system I can stick to. My days feel calmer and more organized."</p>
+          <cite class="mt-4 block text-sm font-semibold text-slate-900">- Priya M., Marketing Lead</cite>
+        </blockquote>
+        <blockquote class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-slate-700">"The analytics helped me identify where I waste time. Huge improvement in output."</p>
+          <cite class="mt-4 block text-sm font-semibold text-slate-900">- Daniel R., Freelancer</cite>
+        </blockquote>
+        <blockquote class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-slate-700">"Simple, clean, and powerful. My team uses FocusFlow every day to stay aligned."</p>
+          <cite class="mt-4 block text-sm font-semibold text-slate-900">- Sofia L., Product Manager</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="pricing" class="bg-slate-50 py-16">
+      <div class="mx-auto w-full max-w-6xl px-6 lg:px-10">
+        <div class="mx-auto max-w-2xl text-center">
+          <h3 class="text-3xl font-extrabold sm:text-4xl">Simple, Transparent Pricing</h3>
+          <p class="mt-3 text-slate-600">Choose the plan that fits your productivity goals.</p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+            <h4 class="text-xl font-bold">Basic</h4>
+            <p class="mt-3 text-3xl font-extrabold">$9<span class="text-base font-medium text-slate-500">/mo</span></p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-600">
+              <li>Unlimited tasks</li>
+              <li>Daily planner</li>
+              <li>Email support</li>
+            </ul>
+            <button class="mt-6 w-full rounded-full border border-slate-300 px-4 py-2 font-semibold transition hover:border-primary hover:text-primary">Choose Basic</button>
+          </article>
+          <article class="rounded-2xl border-2 border-primary bg-white p-7 shadow-glow">
+            <p class="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-bold uppercase text-primary">Most Popular</p>
+            <h4 class="mt-3 text-xl font-bold">Standard</h4>
+            <p class="mt-3 text-3xl font-extrabold">$19<span class="text-base font-medium text-slate-500">/mo</span></p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-600">
+              <li>Everything in Basic</li>
+              <li>Advanced analytics</li>
+              <li>Team collaboration tools</li>
+            </ul>
+            <button class="mt-6 w-full rounded-full bg-primary px-4 py-2 font-semibold text-white transition hover:bg-blue-700">Choose Standard</button>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+            <h4 class="text-xl font-bold">Premium</h4>
+            <p class="mt-3 text-3xl font-extrabold">$39<span class="text-base font-medium text-slate-500">/mo</span></p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-600">
+              <li>Everything in Standard</li>
+              <li>Priority support</li>
+              <li>Custom productivity reports</li>
+            </ul>
+            <button class="mt-6 w-full rounded-full border border-slate-300 px-4 py-2 font-semibold transition hover:border-primary hover:text-primary">Choose Premium</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-dark py-16 text-white">
+      <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-2 lg:items-center lg:px-10">
+        <div>
+          <h3 class="text-3xl font-extrabold sm:text-4xl">Ready to focus better?</h3>
+          <p class="mt-4 text-blue-100">Start your FocusFlow journey today and build productive habits that last.</p>
+          <a href="#" class="mt-6 inline-block rounded-full bg-primary px-6 py-3 font-bold transition hover:bg-blue-700">Try FocusFlow Now</a>
+        </div>
+        <form class="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-md">
+          <div class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-blue-100 focus:border-blue-300 focus:outline-none" />
+            <input type="email" placeholder="Your Email" class="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-blue-100 focus:border-blue-300 focus:outline-none" />
+            <textarea rows="4" placeholder="Your Message" class="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-blue-100 focus:border-blue-300 focus:outline-none"></textarea>
+            <button type="submit" class="w-full rounded-lg bg-primary px-4 py-3 font-semibold transition hover:bg-blue-700">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-slate-600 md:flex-row lg:px-10">
+      <p>© 2026 FocusFlow</p>
+      <div class="flex items-center gap-5">
+        <a href="#home" class="transition hover:text-primary">Home</a>
+        <a href="#features" class="transition hover:text-primary">Features</a>
+        <a href="#pricing" class="transition hover:text-primary">Pricing</a>
+        <a href="#contact" class="transition hover:text-primary">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" aria-label="Twitter" class="rounded-full border border-slate-200 p-2 transition hover:border-primary hover:text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 5.924c-.736.327-1.527.548-2.357.647a4.11 4.11 0 001.804-2.27 8.21 8.21 0 01-2.606.995A4.104 4.104 0 0015.448 4a4.108 4.108 0 00-4.104 4.104c0 .322.037.636.106.936-3.41-.171-6.435-1.804-8.46-4.285a4.086 4.086 0 00-.556 2.064 4.103 4.103 0 001.827 3.417 4.086 4.086 0 01-1.859-.513v.051a4.106 4.106 0 003.292 4.024 4.111 4.111 0 01-1.853.07 4.109 4.109 0 003.834 2.85A8.24 8.24 0 012 18.407 11.633 11.633 0 008.29 20c7.547 0 11.675-6.253 11.675-11.675 0-.178-.004-.354-.012-.53A8.32 8.32 0 0022 5.924z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="rounded-full border border-slate-200 p-2 transition hover:border-primary hover:text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452H16.89v-5.569c0-1.328-.024-3.036-1.851-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H9.347V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.37-1.849 3.603 0 4.268 2.371 4.268 5.455v6.285zM5.337 7.433a2.066 2.066 0 110-4.132 2.066 2.066 0 010 4.132zM7.119 20.452H3.553V9h3.566v11.452z"/></svg>
+        </a>
+        <a href="#" aria-label="GitHub" class="rounded-full border border-slate-200 p-2 transition hover:border-primary hover:text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.649.5.5 5.649.5 12c0 5.084 3.292 9.396 7.86 10.917.575.107.785-.25.785-.556 0-.274-.01-1-.016-1.962-3.197.695-3.872-1.54-3.872-1.54-.523-1.328-1.277-1.682-1.277-1.682-1.043-.713.08-.699.08-.699 1.153.081 1.76 1.185 1.76 1.185 1.024 1.755 2.687 1.248 3.342.954.103-.742.401-1.248.729-1.535-2.552-.29-5.236-1.276-5.236-5.68 0-1.255.45-2.282 1.185-3.087-.119-.29-.514-1.457.113-3.038 0 0 .967-.31 3.168 1.179A11.05 11.05 0 0112 6.072c.979.005 1.965.132 2.886.388 2.2-1.49 3.166-1.179 3.166-1.179.629 1.581.234 2.748.115 3.038.738.805 1.183 1.832 1.183 3.087 0 4.415-2.689 5.387-5.252 5.671.412.355.779 1.058.779 2.133 0 1.54-.014 2.782-.014 3.16 0 .309.207.669.79.555A11.505 11.505 0 0023.5 12C23.5 5.649 18.351.5 12 .5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
